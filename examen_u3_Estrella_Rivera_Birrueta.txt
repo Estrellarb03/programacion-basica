@@ -1,0 +1,65 @@
+/**************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+***************************/
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+void caja(int num, int chocolates){
+    int iterador;
+    cout<<"Caja ";cout<<num;
+    cout<<"\n";
+    iterador = 0;
+    for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < 8; j++) {
+            iterador = iterador + 1;
+            if ( chocolates >= iterador ) {
+                cout<<" * ";   
+            } else {
+                cout<<" X ";
+            }
+            
+        }
+        cout<<"\n";
+    }
+}
+
+int main()
+{
+    // variables
+    int num_chocolates, num_cajas, mod, num_total_chocolates_por_caja = 48;
+    float division;
+    // 1. Preguntar el numero de chocolate
+    cout<<"¿Cuantos chocolates vas a querer?:";
+    cin>> num_chocolates;
+    
+    mod = num_chocolates % num_total_chocolates_por_caja; // modulo retorna el resido de la division
+    
+   if ( mod == 0) {
+       num_cajas =  num_chocolates / num_total_chocolates_por_caja;
+       
+        for (int i = 1; i <= num_cajas; i++) {
+            caja(i, num_total_chocolates_por_caja);cout<<"\n";
+        }
+   } else {
+       
+       division = float(num_chocolates) / float(num_total_chocolates_por_caja);
+       num_cajas =  (int) division;
+       
+      if ( num_cajas == 0 ){
+            caja( num_cajas+1, mod);cout<<"\n";
+       } else {
+            for (int i = 1; i <= num_cajas; i++) {
+                caja(i, num_total_chocolates_por_caja);cout<<"\n";
+            }
+            caja(num_cajas+1, mod);cout<<"\n";
+           
+       }
+   }
+   return 0;
+}
