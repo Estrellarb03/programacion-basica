@@ -1,0 +1,315 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    cout<<"*"<<endl;
+    cout<<"**"<<endl;
+    cout<<"***"<<endl;
+    cout<<"****"<<endl;
+    cout<<"*****"<<endl;
+
+    return 0;
+}
+
+------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    string nombre;
+    string paterno;
+    string materno;
+    cout<<"Dame tu nombre "<<endl;
+    cin>>nombre;
+    cout<<"Dame tu apellido paterno"<<endl;
+    cin>> paterno;
+    cout<<"Dame tu apellido materno"<<endl;
+    cin>>materno;
+    cout<<"tu nombre es: "<< paterno<<" "<<materno<<" "<<nombre;
+
+    return 0;
+}
+
+----------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float n1;
+    float n2;
+    float n3;
+    cout<<"Introduce  la primera calificacion"<<endl;
+    cin>> n1;
+    cout<<"Introduce la segunda calificacion"<<endl;
+    cin>>n2;
+    cout<<"Introduce la tercera calificacion" <<endl;
+    cin>> n3;
+    
+    cout<<"El promedio de tus calificaciones es:"<<""<<(n1+n2+n3)/3;
+    
+    return 0;
+}
+-------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float f;
+   float o;
+   cout<<"introduce la medida del fondo"<<endl;
+   cin>> f;
+   cout<<"introduce la meida del frente"<<endl;
+   cin>>o;
+   cout<<"El total de alambre que necesitas es:" <<""<<(f*2+o*2)*3;
+
+    return 0;
+}
+-------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float b;
+   float h;
+   cout<<"introduce la medida de base"<<endl;
+   cin>> b;
+   cout<<"introduce la meida de altura "<<endl;
+   cin>>h;
+   cout<<"La base del tringulo es :" <<""<<(b*h)/2;
+
+    return 0;
+}
+-------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   string x;
+    cout<<"Escribe una palabra"<< endl;
+    cin>> x;
+    cout<<"el numero de letras que tiene la palabra es: " << x.length();
+
+    return 0;
+}
+
+-------------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //Programa para obtener el salario semanal con horas extras
+    
+    int hrs, ht, st, he;
+    
+    cout<<"Horas trabajadas en la semana: "<<endl;
+    cin>>hrs;
+    
+    if (hrs<21){
+        ht=hrs*5;
+        he=0;
+        st=ht+he;
+        cout<<"Tu salario semanal es: "<<(hrs)*5<<endl;
+    }
+    else 
+    if (hrs>20 && hrs<41){
+            ht=140;
+            he= (hrs-20)*9;
+            st=ht+he;
+        }
+    else 
+         if (hrs>40 && hrs<61){
+            ht=160;
+            he= (hrs-20)*10;
+            st=ht+he;
+        }
+    else 
+        if (hrs>60){
+            ht=200;
+            he= (hrs-20)*20;
+            st=ht+he;
+        }
+            cout<<"Tu sueldo es de: "<<st<<" Que consiste en "<<ht<<" por hora normal y "<<he<<endl;
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   char letra;
+
+    cout<<"Ingrese una letra"<<endl;
+    cin>>letra;
+    
+    switch (letra){
+        case 'a': cout<<"Es vocal";
+        break;
+        case 'e': cout<<"Es vocal";
+        break;
+        case 'i': cout<<"Es vocal";
+        break;
+        case 'o': cout<<"Es vocal";
+        break;
+        case 'u': cout<<"Es vocal";
+        break;
+        
+    default: cout<<"No es vocal"<<endl; break;
+    }
+    
+
+    return 0;
+}
+-----------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    #include "iostream"
+
+    	int i;
+        for(i=1;i<50; i++){
+        cout<< i <<", "<<endl;
+        }	
+        cout<<i;
+         
+    return 0;
+}
+-----------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    #include "iostream"
+
+    	int i;
+        for(i=1;i<50; i++){
+        cout<< i <<", ";
+        }	
+        cout<<i;
+         
+    return 0;
+}
+-------------------------------------------------------------------
+#include<iostream>
+using namespace std;
+int main()
+{
+	
+	int opcion;
+	cout << "Menu de opciones:"<<endl;
+	cout << "1) Sumar "<<endl;
+    cout << "2) Restar "<<endl;
+    cout << "3) Multiplicar "<<endl;
+    cout << "4) Salir "<<endl; 	
+    
+    cout << "Selecciona una opcion"<<endl;
+    cin >> opcion;
+	
+	int n1,n2;
+	float resultado;
+	switch (opcion){		
+	case 1:	
+	cout << "Dame un numero: " <<endl;
+	cin >> n1;
+	cout << "Dame un numero: "<<endl;
+	cin >> n2;
+	resultado = n1+n2;	
+	cout << "El resultado es:"<< " "<<resultado<<endl;
+    }
+	 
+		int n3,n4;
+		float resultado1;
+		switch (opcion){		
+		case 2:	
+		cout << "Dame un numero: " <<endl;
+		cin >> n3;
+		cout << "Dame un numero: "<<endl;
+		cin >> n4;
+		resultado1 = n3-n4;	
+		cout << "El resultado es"<<" "<<resultado1<<endl;		
+		break;}
+		
+			int n5,n6;
+			float resultado2;
+			switch (opcion){					
+			case 3:
+			cout << "Dame un numero: " <<endl;
+			cin >> n5;
+			cout << "Dame un numero: "<<endl;
+			cin >> n6;
+			resultado2 = n5*n6;	
+			cout << "El resultado es:"<<" "<<resultado2<<endl;
+			break;
+			
+			 default: cout << "Salir"<<endl; break;
+			 }
+			 			 		 			 		 			
+	return 0;
+}
+---------------------------------------------------------------------------------
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+
+int filas, columnas,i,j,n;
+cout<<"Dame las columnas que deceas que lleve tu matriz:";
+cin>>columnas;
+cout<<"Dame las filas quedeceas que lleve tu matriz:";
+cin>>filas;
+for(i=0; i<filas; i++){
+	for(j=0; j<columnas; j++){
+	  n=1+rand()%(10-1);
+	  cout<<n<<" ";
+	  }
+	cout<<endl;
+    }
+    return 0;
+}
+------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i;
+  for(i=1; i<50; i++){
+      cout<<i<<endl;
+  }
+  cout<<i;
+	return 0;
+}
+
+
+
+
+
+
+
+
